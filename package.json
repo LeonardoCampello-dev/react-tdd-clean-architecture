@@ -11,7 +11,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{ts|tsx}": [
+    "*.{ts,tsx}": [
       "eslint 'src/**' --fix",
       "npm run test:staged"
     ]
