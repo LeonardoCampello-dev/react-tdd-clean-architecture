@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo 'Rodando pre-commit 🤠'; npm run test:ci; echo 'Sucesso ✅'
