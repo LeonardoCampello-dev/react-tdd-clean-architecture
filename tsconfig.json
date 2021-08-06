@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES5",
+    "target": "ES6",
     "lib": ["dom", "DOM.Iterable", "esnext"],
     "esModuleInterop": true,
     "module": "esnext",
@@ -11,9 +11,6 @@
     "allowJs": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "noEmit": true,
     "paths": {
       "@/*": ["*"]
     }

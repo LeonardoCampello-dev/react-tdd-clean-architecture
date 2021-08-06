@@ -1,5 +1,11 @@
 {
-  "extends": "standard-with-typescript",
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": ["standard-with-typescript", "plugin:react/recommended"],
+  "plugins": ["react"],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
@@ -7,6 +13,8 @@
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/camelcase": "off",
-    "@typescript-eslint/no-unused-vars": "warn"
+    "@typescript-eslint/no-unused-vars": "warn",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error"
   }
 }
