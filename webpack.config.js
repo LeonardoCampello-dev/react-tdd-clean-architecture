@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/main/index.tsx',
   output: {
     path: path.join(__dirname, 'public/js'),
-    publicPath: 'public/js',
+    publicPath: '/public/js',
     filename: 'bundle.js'
   },
   resolve: {
@@ -48,7 +48,7 @@ module.exports = {
   },
   externals: {
     react: 'React',
-    'react-dom': 'React DOM'
+    'react-dom': 'ReactDOM'
   },
   plugins: [new CleanWebpackPlugin()]
 }
