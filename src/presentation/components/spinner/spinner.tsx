@@ -8,6 +8,7 @@ const Spinner: React.FC<Props> = (props: Props) => {
   return (
     <div
       {...props}
+      data-testid='spinner'
       className={[Styles.spinner, props.className].join(' ')}
     >
       <div />
