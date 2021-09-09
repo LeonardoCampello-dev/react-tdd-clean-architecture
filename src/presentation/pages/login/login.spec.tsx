@@ -88,7 +88,6 @@ const simulateStatusForField = (
 ): void => {
   const emailStatus = sut.getByTestId(`${fieldName}-status`)
 
-  // @ts-ignore
   expect(emailStatus.title).toEqual(validationError || 'Tudo certo!')
   expect(emailStatus.textContent).toEqual(
     validationError ? '🔴' : '✅'
@@ -184,5 +183,14 @@ describe('Login Component', () => {
       email,
       password
     })
+  })
+
+  test('Should call Authentication only once', () => {
+    const { sut, authenticationSpy } = makeSut()
+
+    simulateValidSubmit(sut)
+    simulateValidSubmit(sut)
+
+    expect(authenticationSpy.callsCount).toBe(1)
   })
 })
