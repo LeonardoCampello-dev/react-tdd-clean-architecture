@@ -44,7 +44,7 @@ const Login: React.FC<Props> = ({
   ): Promise<void> => {
     event.preventDefault()
 
-    if (state.isLoading) {
+    if (state.isLoading || state.emailError || state.passwordError) {
       return
     }
 
@@ -62,6 +62,7 @@ const Login: React.FC<Props> = ({
 
       <Context.Provider value={{ state, setState }}>
         <form
+          data-testid='form'
           action=''
           className={Styles.form}
           onSubmit={handleSubmit}
