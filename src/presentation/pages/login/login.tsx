@@ -44,6 +44,10 @@ const Login: React.FC<Props> = ({
   ): Promise<void> => {
     event.preventDefault()
 
+    if (state.isLoading) {
+      return
+    }
+
     setState({ ...state, isLoading: true })
 
     await authentication.auth({
