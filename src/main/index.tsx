@@ -2,6 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router } from '@/presentation/components'
 
+import { makeLogin } from './factories/pages/login/login-factory'
+
 import '@/presentation/styles/globals.scss'
 
-ReactDOM.render(<Router />, document.getElementById('main'))
+ReactDOM.render(
+  <Router makeLogin={makeLogin} />,
+  document.getElementById('main')
+)
