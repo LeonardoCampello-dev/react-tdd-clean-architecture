@@ -14,7 +14,7 @@ import {
 
 import faker from 'faker'
 
-import Login from './login'
+import { Login } from '@/presentation/pages/'
 
 import { Validation } from '@/presentation/protocols/validation'
 
