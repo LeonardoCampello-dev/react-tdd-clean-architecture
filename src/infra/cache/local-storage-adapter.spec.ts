@@ -4,6 +4,9 @@ import { cleanup } from '@testing-library/react'
 import faker from 'faker'
 import 'jest-localstorage-mock'
 
+const makeSut = (): LocalStorageAdapter => {
+  return new LocalStorageAdapter()
+}
 describe('LocalStorageAdapter', () => {
   afterEach(cleanup)
 
@@ -11,7 +14,7 @@ describe('LocalStorageAdapter', () => {
     localStorage.clear()
   })
   test('Should call localStorage with correct values', async () => {
-    const sut = new LocalStorageAdapter()
+    const sut = makeSut()
 
     const key = faker.database.column()
     const value = faker.random.word()
