@@ -29,14 +29,15 @@ describe('LocalSaveAccessToken', () => {
     expect(setStorageMock.value).toBe(accessToken)
   })
 
-  test('Should ', async () => {
+  test('Should throw if SetStorage throws', async () => {
     const { sut, setStorageMock } = makeSut()
 
-    const accessToken = faker.datatype.uuid()
+    jest
+      .spyOn(setStorageMock, 'set')
+      .mockRejectedValueOnce(new Error())
 
-    await sut.save(accessToken)
+    const promise = sut.save(faker.datatype.uuid())
 
-    expect(setStorageMock.key).toBe('accessToken')
-    expect(setStorageMock.value).toBe(accessToken)
+    await expect(promise).rejects.toThrow(new Error())
   })
 })
