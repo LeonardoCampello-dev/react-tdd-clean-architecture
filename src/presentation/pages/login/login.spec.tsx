@@ -2,7 +2,7 @@ import React from 'react'
 import { Router } from 'react-router-dom'
 import { createMemoryHistory } from 'history'
 
-import { render, RenderResult, fireEvent, waitFor } from '@testing-library/react'
+import { render, RenderResult, fireEvent, waitFor, cleanup } from '@testing-library/react'
 
 import faker from 'faker'
 
@@ -94,6 +94,8 @@ const testElementText = (sut: RenderResult, fieldName: string, text: string): vo
 }
 
 describe('Login Component', () => {
+  afterEach(cleanup)
+
   test('Should start with initial state', () => {
     const validationError = faker.random.words()
 
