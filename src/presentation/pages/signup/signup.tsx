@@ -54,7 +54,14 @@ const SignUp: React.FC<Props> = ({ validation }: Props) => {
 
           <Input type='password' name='passwordConfirmation' placeholder='Repita sua senha' />
 
-          <button data-testid='submit' disabled type='submit' className={Styles.submit}>
+          <button
+            data-testid='submit'
+            disabled={Boolean(
+              state.nameError || state.emailError || state.passwordError || state.passwordError
+            )}
+            type='submit'
+            className={Styles.submit}
+          >
             Entrar
           </button>
 
