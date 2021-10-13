@@ -210,7 +210,7 @@ describe('Login Component', () => {
   test('Should go to signup page', () => {
     const { sut } = makeSut()
 
-    const signup = sut.getByTestId('signup')
+    const signup = sut.getByTestId('signup-link')
 
     fireEvent.click(signup)
 
