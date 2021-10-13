@@ -204,7 +204,7 @@ describe('Login Component', () => {
 
     const error = new InvalidCredentialsError()
 
-    jest.spyOn(saveAccessTokenMock, 'save').mockReturnValueOnce(Promise.reject(error))
+    jest.spyOn(saveAccessTokenMock, 'save').mockRejectedValueOnce(error)
 
     await simulateValidSubmit(sut)
 
