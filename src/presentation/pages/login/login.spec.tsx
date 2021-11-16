@@ -8,8 +8,6 @@ import faker from 'faker'
 
 import { Login } from '@/presentation/pages/'
 
-import { Validation } from '@/presentation/protocols/validation'
-
 import { ValidationStub, AuthenticationSpy, SaveAccessTokenMock, Helper } from '@/presentation/test'
 
 import { InvalidCredentialsError } from '@/domain/errors'

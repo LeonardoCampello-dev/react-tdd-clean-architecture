@@ -2,8 +2,6 @@ import React from 'react'
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import { makeSignUp } from '@/main/factories/pages/signup/signup-factory'
-
 type Factory = {
   makeLogin: React.FC
   makeSignUp: React.FC
