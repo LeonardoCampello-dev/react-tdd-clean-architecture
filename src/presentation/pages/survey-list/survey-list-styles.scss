@@ -120,6 +120,7 @@
             margin: 24px;
 
             align-self: center;
+            flex-grow: 1;
           }
         }
 
@@ -141,6 +142,20 @@
           &:hover {
             background-color: $primaryDark;
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .surveyListWrap {
+    .contentWrap {
+      ul {
+        flex-direction: column;
+
+        li {
+          flex-basis: 100%;
         }
       }
     }
