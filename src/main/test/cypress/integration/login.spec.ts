@@ -92,7 +92,7 @@ describe('Login', () => {
 
     FormHelper.testUrl('/')
 
-    FormHelper.testLocalStorageItem('accessToken')
+    FormHelper.testLocalStorageItem('account')
   })
 
   it('Should prevent multiple submits', () => {
